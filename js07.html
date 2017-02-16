@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>re-direct based upon window size</title>
+</head>
+<body>
+<script language=JavaScript>
+	function windowHeight( ) {
+	if (document.body && document.body.clientHeight) { //test for IE
+			return document.body.clientHeight; // test for NS
+		} else if ( window.innerHeight) {
+			return window.innerHeight;
+		} else {
+			return 0;
+		} // both test have failed
+	}
+	if (windowHeight() >= 300 ) {
+		document.location = "https://www.google.co.th/?gws_rd=cr&ei=e6idWIWMJMzqvgT_tZ1g"
+	} else {
+		document.location = "http:/s/angsila.cs.buu.ac.th/~58160421/887371/lab04/js02.html"
+	}
+</script>
+</body>
+</html>

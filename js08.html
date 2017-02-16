@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Image rollover</title>
+    <script language="JavaScript">
+        function highlightdocs() {
+            if (document.images) {
+                document.images['docs'].src = docsOn.src;
+            }
+        }
+        function unhighlightdocs() {
+            document.images['docs'].src = docsOff.src;
+        }
+        if (document.images) {
+            docsOn = new Image();
+            docsOn.src = "facebook2.png";
+            docsOff = new Image();
+            docsOff.src = "facebook3.png";
+        }
+    </script>
+</head>
+<body>
+    <a href="https://www.facebook.com/" onMouseOver="highlightdocs()" onMouseOut="unhighlightdocs()">
+        <img src="facebook3.png" name="docs" height="25" width="25" border="0">
+    </a>
+</body>
+</html>
